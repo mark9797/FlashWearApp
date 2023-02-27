@@ -1,0 +1,10 @@
+C:\Users\marku\source\repos\FileFlashTest\FileFlashTest\bin\Debug\FileFlashTest.exe.config
+C:\Users\marku\source\repos\FileFlashTest\FileFlashTest\bin\Debug\FileFlashTest.exe
+C:\Users\marku\source\repos\FileFlashTest\FileFlashTest\bin\Debug\FileFlashTest.pdb
+C:\Users\marku\source\repos\FileFlashTest\FileFlashTest\obj\Debug\FileFlashTest.csproj.AssemblyReference.cache
+C:\Users\marku\source\repos\FileFlashTest\FileFlashTest\obj\Debug\FileFlashTest.Form1.resources
+C:\Users\marku\source\repos\FileFlashTest\FileFlashTest\obj\Debug\FileFlashTest.Properties.Resources.resources
+C:\Users\marku\source\repos\FileFlashTest\FileFlashTest\obj\Debug\FileFlashTest.csproj.GenerateResource.cache
+C:\Users\marku\source\repos\FileFlashTest\FileFlashTest\obj\Debug\FileFlashTest.csproj.CoreCompileInputs.cache
+C:\Users\marku\source\repos\FileFlashTest\FileFlashTest\obj\Debug\FileFlashTest.exe
+C:\Users\marku\source\repos\FileFlashTest\FileFlashTest\obj\Debug\FileFlashTest.pdb
