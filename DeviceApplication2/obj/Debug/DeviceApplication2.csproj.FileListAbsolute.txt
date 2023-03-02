@@ -6,3 +6,12 @@ c:\users\kmaran\documents\visual studio 2013\Projects\DeviceApplication2\DeviceA
 c:\users\kmaran\documents\visual studio 2013\Projects\DeviceApplication2\DeviceApplication2\obj\Debug\DeviceApplication2.csproj.GenerateResource.Cache
 c:\users\kmaran\documents\visual studio 2013\Projects\DeviceApplication2\DeviceApplication2\obj\Debug\DeviceApplication2.exe
 c:\users\kmaran\documents\visual studio 2013\Projects\DeviceApplication2\DeviceApplication2\obj\Debug\DeviceApplication2.pdb
+C:\Users\kmaran\source\repos\DeviceApplication2\DeviceApplication2\bin\Debug\DeviceApplication2.exe
+C:\Users\kmaran\source\repos\DeviceApplication2\DeviceApplication2\bin\Debug\DeviceApplication2.pdb
+C:\Users\kmaran\source\repos\DeviceApplication2\DeviceApplication2\obj\Debug\DeviceApplication2.csprojResolveAssemblyReference.cache
+C:\Users\kmaran\source\repos\DeviceApplication2\DeviceApplication2\obj\Debug\DeviceApplication2.Form1.resources
+C:\Users\kmaran\source\repos\DeviceApplication2\DeviceApplication2\obj\Debug\DeviceApplication2.Properties.Resources.resources
+C:\Users\kmaran\source\repos\DeviceApplication2\DeviceApplication2\obj\Debug\DeviceApplication2.csproj.GenerateResource.Cache
+C:\Users\kmaran\source\repos\DeviceApplication2\DeviceApplication2\obj\Debug\DeviceApplication2.exe
+C:\Users\kmaran\source\repos\DeviceApplication2\DeviceApplication2\obj\Debug\DeviceApplication2.pdb
+C:\Users\kmaran\source\repos\DeviceApplication2\DeviceApplication2\obj\Debug\DeviceApplication2.CustomKeyBoard.resources

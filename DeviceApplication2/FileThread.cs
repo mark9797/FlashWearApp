@@ -26,7 +26,7 @@ namespace DeviceApplication2
 
         public void FileProc()
         {
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 3; i++)
             {                
                 String pathname = "Storage Card/test" + i;
                 switch (mode)
@@ -46,7 +46,7 @@ namespace DeviceApplication2
                 //f.updateAsynch();
                 //createFile(pathname);
                 //deleteFile(pathname);   
-                Thread.Sleep(1000);
+                //Thread.Sleep(1000);
 
             }
         }
