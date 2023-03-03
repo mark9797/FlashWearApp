@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Threading;
 using System.IO;
+using System.Diagnostics;
 
 namespace DeviceApplication2
 {
@@ -18,8 +19,12 @@ namespace DeviceApplication2
         bool ticktimer = false;
         List<Thread> runningThreads;
         private CustomKeyBoard keyboard;
-        private TextBox selectedTextBox; 
+        private TextBox selectedTextBox;
 
+        private int filesCreated = 0;
+        private int iteration = 0;
+        private int major_iteration = 0;
+        private int bytes_written = 0;
         private delegate void UpdateGUI();
 
         public Form1()
@@ -106,29 +111,7 @@ namespace DeviceApplication2
             ticktimer = true;
         }
 
-        public void updateAsynch()
-        {
-            if (InvokeRequired)
-            {
-                Invoke(new UpdateGUI(update));
-            }
-        }
-
-        private void update()
-        {
-            System.Diagnostics.Trace.WriteLine("Update! Val: " + val);
-            //Console.WriteLine("UPDATE");
-            val += 1;
-            label1.Text = Convert.ToString(val);
-            label1.Refresh();
-        }
-
-        public void updateTime(string s, string m, string h)
-        {
-            this.hourLabel.Text = h;
-            this.minLabel.Text = m;
-            this.sLabel.Text = s;
-        }
+     
         private void button2_Click(object sender, EventArgs e)
         {
             foreach (Thread t in runningThreads)
@@ -160,15 +143,6 @@ namespace DeviceApplication2
             ticktimer = true;
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            if (ticktimer)
-            {
-                tm.incSec();
-                //Console.WriteLine("TICK");
-                updateAsynch();
-            }
-        }
 
         private void button6_Click(object sender, EventArgs e)
         {
@@ -311,6 +285,137 @@ namespace DeviceApplication2
             }
         }
 
+        public void incFilesCreatedAsynch()
+        {
+            if (InvokeRequired)
+            {
+                Invoke(new UpdateGUI(incFilesCreated));
+            }
+        }
+
+        private void incFilesCreated()
+        {
+            this.filesCreated += 1;
+            filesCreatedBox.Text = Convert.ToString(filesCreated);
+        }
+
+        public void incIterationAsynch(int val)
+        {
+            this.iteration = val;
+            if (InvokeRequired)
+            {
+                Invoke(new UpdateGUI(incIteration));
+            }
+        }
+
+        private void incIteration()
+        {
+            iterationBox.Text = Convert.ToString(iteration);
+        }
+
+        public void incMajorIterationAsynch(int val)
+        {
+            this.major_iteration = val;
+            if (InvokeRequired)
+            {
+                Invoke(new UpdateGUI(incMajorIteration));
+            }
+        }
+
+        private void incMajorIteration()
+        {
+            majIterationBox.Text = Convert.ToString(major_iteration);
+        }
+
+        public void incBytesWrittenAsynch(int val)
+        {
+            this.bytes_written += val;
+            if (InvokeRequired)
+            {
+                Invoke(new UpdateGUI(incBytesWritten));
+            }
+        }
+
+        private void incBytesWritten()
+        {
+            bytesWrittenBox.Text = Convert.ToString(bytes_written);
+            if (bytes_written + Config.File_size > Config.Total_data_amount && Config.Total_data_amount > 0)
+            {
+                foreach (Thread t in runningThreads)
+                {
+                    t.Abort();
+                }
+                stopClock();
+                MessageBox.Show("Test stopped since max total of written bytes (" + Convert.ToString(Config.Total_data_amount) + ") was reached.", "Max byte reached", MessageBoxButtons.OK, MessageBoxIcon.Hand, MessageBoxDefaultButton.Button1);
+
+            }
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+
+            FileThread ft = new FileThread(this);
+            ft.Mode = 0;
+            Thread t = new Thread(new ThreadStart(ft.FileProc));
+            runningThreads.Add(t);
+            t.Start();
+            System.Diagnostics.Trace.WriteLine("Started create!");
+            ticktimer = true;
+       
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            foreach (Thread t in runningThreads)
+            {
+                t.Abort();
+            }
+            stopClock();
+            System.Diagnostics.Trace.WriteLine("Test aborted!");
+
+        }
+
+        //Timer clock function handle
+        public void updateAsynch()
+        {
+            if (InvokeRequired)
+            {
+                Invoke(new UpdateGUI(update));
+            }
+        }
+
+        private void update()
+        {
+            System.Diagnostics.Trace.WriteLine("Update! Val: " + val);
+            //Console.WriteLine("UPDATE");
+            val += 1;
+            label1.Text = Convert.ToString(val);
+            label1.Refresh();
+        }
+
+        public void updateTime(string s, string m, string h)
+        {
+            this.hourLabel.Text = h;
+            this.minLabel.Text = m;
+            this.sLabel.Text = s;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (ticktimer)
+            {
+                tm.incSec();
+                //Console.WriteLine("TICK");
+                updateAsynch();
+            }
+        }
+
+        public void stopClock()
+        {
+            ticktimer = false;
+            tm.reset();
+        }
         //Got focus TextBox functions
 
         private void textBox1_GotFocus(object sender, EventArgs e)
@@ -357,7 +462,7 @@ namespace DeviceApplication2
         {
             handleTextBoxClick(sender, e);
         }
-    
+
 
 
     }

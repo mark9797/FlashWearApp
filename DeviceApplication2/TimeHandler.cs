@@ -19,6 +19,13 @@ namespace DeviceApplication2
             this.f = f;
         }
 
+        public void reset()
+        {
+            s = 0;
+            m = 0;
+            h = 0;
+        }
+
         public void incSec()
         {
             s += 1;

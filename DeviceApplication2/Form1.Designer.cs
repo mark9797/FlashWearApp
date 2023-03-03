@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -67,6 +66,20 @@
             this.timer1 = new System.Windows.Forms.Timer();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.textBox10 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.iterationBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.majIterationBox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.filesCreatedBox = new System.Windows.Forms.TextBox();
+            this.filesDeletedBox = new System.Windows.Forms.TextBox();
+            this.bytesWrittenBox = new System.Windows.Forms.TextBox();
+            this.bytesFlushedBox = new System.Windows.Forms.TextBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -74,24 +87,16 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(138, 319);
+            this.button1.Location = new System.Drawing.Point(693, 203);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(126, 65);
+            this.button1.Size = new System.Drawing.Size(71, 34);
             this.button1.TabIndex = 0;
             this.button1.Text = "Create";
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular);
-            this.label1.Location = new System.Drawing.Point(406, 145);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 48);
-            this.label1.Text = "0";
-            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(651, 319);
+            this.button2.Location = new System.Drawing.Point(670, 343);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(103, 65);
             this.button2.TabIndex = 2;
@@ -100,18 +105,18 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(483, 319);
+            this.button3.Location = new System.Drawing.Point(693, 288);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(122, 65);
+            this.button3.Size = new System.Drawing.Size(80, 34);
             this.button3.TabIndex = 3;
             this.button3.Text = "Delete";
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(307, 319);
+            this.button4.Location = new System.Drawing.Point(693, 243);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(122, 65);
+            this.button4.Size = new System.Drawing.Size(57, 39);
             this.button4.TabIndex = 4;
             this.button4.Text = "Write";
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -128,13 +133,26 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.button7);
+            this.tabPage1.Controls.Add(this.button6);
+            this.tabPage1.Controls.Add(this.bytesFlushedBox);
+            this.tabPage1.Controls.Add(this.bytesWrittenBox);
+            this.tabPage1.Controls.Add(this.filesDeletedBox);
+            this.tabPage1.Controls.Add(this.filesCreatedBox);
+            this.tabPage1.Controls.Add(this.label10);
+            this.tabPage1.Controls.Add(this.label9);
+            this.tabPage1.Controls.Add(this.label8);
+            this.tabPage1.Controls.Add(this.label7);
+            this.tabPage1.Controls.Add(this.majIterationBox);
+            this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Controls.Add(this.iterationBox);
+            this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.sLabel);
             this.tabPage1.Controls.Add(this.minLabel);
             this.tabPage1.Controls.Add(this.hourLabel);
-            this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.button4);
             this.tabPage1.Controls.Add(this.button2);
@@ -147,7 +165,7 @@
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Regular);
-            this.label6.Location = new System.Drawing.Point(442, 40);
+            this.label6.Location = new System.Drawing.Point(768, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(17, 30);
             this.label6.Text = "s";
@@ -155,7 +173,7 @@
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Regular);
-            this.label5.Location = new System.Drawing.Point(387, 40);
+            this.label5.Location = new System.Drawing.Point(713, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(26, 30);
             this.label5.Text = "m";
@@ -163,7 +181,7 @@
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Regular);
-            this.label4.Location = new System.Drawing.Point(337, 40);
+            this.label4.Location = new System.Drawing.Point(663, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(17, 30);
             this.label4.Text = "h";
@@ -171,7 +189,7 @@
             // sLabel
             // 
             this.sLabel.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Regular);
-            this.sLabel.Location = new System.Drawing.Point(411, 40);
+            this.sLabel.Location = new System.Drawing.Point(737, 0);
             this.sLabel.Name = "sLabel";
             this.sLabel.Size = new System.Drawing.Size(34, 30);
             this.sLabel.Text = "00";
@@ -179,7 +197,7 @@
             // minLabel
             // 
             this.minLabel.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Regular);
-            this.minLabel.Location = new System.Drawing.Point(358, 40);
+            this.minLabel.Location = new System.Drawing.Point(684, 0);
             this.minLabel.Name = "minLabel";
             this.minLabel.Size = new System.Drawing.Size(34, 30);
             this.minLabel.Text = "00";
@@ -187,7 +205,7 @@
             // hourLabel
             // 
             this.hourLabel.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Regular);
-            this.hourLabel.Location = new System.Drawing.Point(305, 40);
+            this.hourLabel.Location = new System.Drawing.Point(631, 0);
             this.hourLabel.Name = "hourLabel";
             this.hourLabel.Size = new System.Drawing.Size(34, 30);
             this.hourLabel.Text = "00";
@@ -406,6 +424,114 @@
             this.textBox10.Size = new System.Drawing.Size(100, 23);
             this.textBox10.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular);
+            this.label1.Location = new System.Drawing.Point(29, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(78, 20);
+            this.label1.Text = "Iteration:";
+            // 
+            // iterationBox
+            // 
+            this.iterationBox.Location = new System.Drawing.Point(150, 23);
+            this.iterationBox.Name = "iterationBox";
+            this.iterationBox.Size = new System.Drawing.Size(100, 23);
+            this.iterationBox.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular);
+            this.label3.Location = new System.Drawing.Point(29, 61);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(123, 20);
+            this.label3.Text = "Major iteration:";
+            // 
+            // majIterationBox
+            // 
+            this.majIterationBox.Location = new System.Drawing.Point(150, 58);
+            this.majIterationBox.Name = "majIterationBox";
+            this.majIterationBox.Size = new System.Drawing.Size(100, 23);
+            this.majIterationBox.TabIndex = 10;
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular);
+            this.label7.Location = new System.Drawing.Point(29, 98);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(106, 20);
+            this.label7.Text = "Files created:";
+            // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular);
+            this.label8.Location = new System.Drawing.Point(29, 127);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(106, 20);
+            this.label8.Text = "Files deleted:";
+            // 
+            // label9
+            // 
+            this.label9.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular);
+            this.label9.Location = new System.Drawing.Point(29, 157);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(109, 20);
+            this.label9.Text = "Bytes written:";
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular);
+            this.label10.Location = new System.Drawing.Point(29, 189);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(109, 20);
+            this.label10.Text = "Bytes flushed:";
+            // 
+            // filesCreatedBox
+            // 
+            this.filesCreatedBox.Location = new System.Drawing.Point(150, 95);
+            this.filesCreatedBox.Name = "filesCreatedBox";
+            this.filesCreatedBox.Size = new System.Drawing.Size(100, 23);
+            this.filesCreatedBox.TabIndex = 19;
+            // 
+            // filesDeletedBox
+            // 
+            this.filesDeletedBox.Location = new System.Drawing.Point(150, 124);
+            this.filesDeletedBox.Name = "filesDeletedBox";
+            this.filesDeletedBox.Size = new System.Drawing.Size(100, 23);
+            this.filesDeletedBox.TabIndex = 20;
+            // 
+            // bytesWrittenBox
+            // 
+            this.bytesWrittenBox.Location = new System.Drawing.Point(150, 154);
+            this.bytesWrittenBox.Name = "bytesWrittenBox";
+            this.bytesWrittenBox.Size = new System.Drawing.Size(100, 23);
+            this.bytesWrittenBox.TabIndex = 21;
+            // 
+            // bytesFlushedBox
+            // 
+            this.bytesFlushedBox.Location = new System.Drawing.Point(150, 186);
+            this.bytesFlushedBox.Name = "bytesFlushedBox";
+            this.bytesFlushedBox.Size = new System.Drawing.Size(100, 23);
+            this.bytesFlushedBox.TabIndex = 22;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(334, 343);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(103, 65);
+            this.button6.TabIndex = 23;
+            this.button6.Text = "Start Test";
+            this.button6.Click += new System.EventHandler(this.button6_Click_1);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(457, 343);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(103, 65);
+            this.button7.TabIndex = 24;
+            this.button7.Text = "Stop Test";
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -425,7 +551,6 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
@@ -463,6 +588,20 @@
         private System.Windows.Forms.TextBox configFilePathBox;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox iterationBox;
+        private System.Windows.Forms.TextBox majIterationBox;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox bytesFlushedBox;
+        private System.Windows.Forms.TextBox bytesWrittenBox;
+        private System.Windows.Forms.TextBox filesDeletedBox;
+        private System.Windows.Forms.TextBox filesCreatedBox;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
 
     }
 }

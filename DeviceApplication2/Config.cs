@@ -11,6 +11,8 @@ namespace DeviceApplication2
         public static readonly int[] default_values = new int[9] { 100, 10, 1024, 1024, 0, 0, 0, 1, 0 };
         public static int[] current_values = default_values;
         private static string configFilePath = "Storage Card/Config.txt";
+
+        /*
         private static int iterations = default_values[0];
         private static int major_iterations = default_values[1];
         private static int file_size = default_values[2]; //Bytes
@@ -20,7 +22,7 @@ namespace DeviceApplication2
         private static int total_data_amount = default_values[6]; //Bytes, 0 equals none
         private static int number_of_threads = default_values[7];
         private static int max_running_time = default_values[8]; //Hours, 0 means none
-
+        */
 
         public static string ConfigFilePath
         {
@@ -30,49 +32,49 @@ namespace DeviceApplication2
 
         public static int Iterations
         {
-            get { return iterations; }
-            set { iterations = value; }
+            get { return current_values[0]; }
+            set { current_values[0] = value; }
         }
         public static int Major_iterations
         {
-            get { return major_iterations; }
-            set { major_iterations = value; }
+            get { return current_values[1]; }
+            set { current_values[1] = value; }
         }
 
         public static int File_size
         {
-            get { return file_size; }
-            set { file_size = value; }
+            get { return current_values[2]; }
+            set { current_values[2] = value; }
         }
         public static int Block_size
         {
-            get { return block_size; }
-            set { block_size = value; }
+            get { return current_values[3]; }
+            set { current_values[3] = value; }
         }
         public static int File_flush
         {
-            get { return file_flush; }
-            set { file_flush = value; }
+            get { return current_values[4]; }
+            set { current_values[4] = value; }
         }
         public static int Remove_file
         {
-            get { return remove_file; }
-            set { remove_file = value; }
+            get { return current_values[5]; }
+            set { current_values[5] = value; }
         }
         public static int Total_data_amount
         {
-            get { return total_data_amount; }
-            set { total_data_amount = value; }
+            get { return current_values[6]; }
+            set { current_values[6] = value; }
         }
         public static int Number_of_threads
         {
-            get { return number_of_threads; }
-            set { number_of_threads = value; }
+            get { return current_values[7]; }
+            set { current_values[7] = value; }
         }
         public static int Max_running_time
         {
-            get { return max_running_time; }
-            set { max_running_time = value; }
+            get { return current_values[8]; }
+            set { current_values[8] = value; }
         }
     }
 }
