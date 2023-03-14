@@ -1,0 +1,9 @@
+c:\users\filher\documents\visual studio 2013\Projects\OutPutty\OutPutty\bin\Debug\OutPutty.exe.config
+c:\users\filher\documents\visual studio 2013\Projects\OutPutty\OutPutty\bin\Debug\OutPutty.exe
+c:\users\filher\documents\visual studio 2013\Projects\OutPutty\OutPutty\bin\Debug\OutPutty.pdb
+c:\users\filher\documents\visual studio 2013\Projects\OutPutty\OutPutty\obj\Debug\OutPutty.csprojResolveAssemblyReference.cache
+c:\users\filher\documents\visual studio 2013\Projects\OutPutty\OutPutty\obj\Debug\OutPutty.Form1.resources
+c:\users\filher\documents\visual studio 2013\Projects\OutPutty\OutPutty\obj\Debug\OutPutty.Properties.Resources.resources
+c:\users\filher\documents\visual studio 2013\Projects\OutPutty\OutPutty\obj\Debug\OutPutty.csproj.GenerateResource.Cache
+c:\users\filher\documents\visual studio 2013\Projects\OutPutty\OutPutty\obj\Debug\OutPutty.exe
+c:\users\filher\documents\visual studio 2013\Projects\OutPutty\OutPutty\obj\Debug\OutPutty.pdb
